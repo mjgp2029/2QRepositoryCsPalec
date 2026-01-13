@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz</title>
+    </head>
+
+    <body>
+        <div>     
+    <section>
+      <h1 class="title">Sign-up Page</h1>
+      <form id="dForm" action="submit" method="post" onsubmit = "confirmSubmission(event)" onreset = "confirmReset(event)">
+        <fieldset>
+          <legend>Your Credentials</legend><br/>
+          <label> StudentID :
+            <input type="number" name="number" id="number" required onblur = "missingInformation()"/>
+          </label><br/><br/>
+
+          <label> Full Name :
+            <input type="text" name="uname" id="uname" required onblur = "missingInformation()" />
+          </label><br/><br/>
+
+          <label> Birthday :
+            <input type="date" name="dob" id="dob" required onblur = "missingInformation()" />
+          </label><br/><br/>
+
+          <label> Email Address :
+            <input type="email" name="email" id="email" required onblur = "missingInformation()" />
+          </label><br/><br/>
+
+          <label> Mobile Phone :
+            <input type="text" name="uname" id="uname" required onblur = "missingInformation()" />
+          </label><br/><br/>
+
+          <label> Grade Level :
+            <select name="grader" id="grade" required onblur = "missingInformation()" >
+                <option value="grade7">Grade 7</option>
+                <option value="grade8">Grade 8</option>
+                <option value="grade9">Grade 9</option>
+                <option value="grade10">Grade 10</option>
+                <option value="grade11">Grade 11</option>
+                <option value="grade12">Grade 12</option>
+            </select>
+          </label><br><br>
+
+          <label> Intern/Extern :
+            <input type="radio" name="yes" value="intern" /> Intern
+            <input type="radio" name="yes" value="extern" /> Extern
+          </label>
+
+          <label> Preferred Organization/Club :
+                <select name="pref" id="pref">
+                <option value="scischo">The Science Scholar</option>
+                <option value="lagablab">Ang Lagablab</option>
+                <option value="bahaghari">Bahaghari</option>
+                <option value="sightlines">Sightlines</option>
+                <option value="mun">MUN</option>
+                <option value="math">Math Club</option>
+                <option value="labuyo">Labuyo</option>
+                <option value="volant">Volant</option>
+                <option value="kislap">Kislap</option>
+                <option value="invictus">Invictus</option>
+            </select>
+          </label><br><br>
+
+          <label> Why You Want To Join :
+            <textarea name="about" id="about" required onblur = "missingInformation()"></textarea>
+          </label><br><br>
+          
+        </fieldset>  
+        <fieldset>
+          <legend>Action Buttons</legend>
+          <button type="submit"> Submit </button>
+          <input type="reset" value=" Clear " />
+        </fieldset> 
+      </form>
+    </section>
+    <script>
+
+      function confirmSubmission(event) {
+    const userConfirmed = confirm("Are you sure you want to submit this form?");
+    
+    if (!userConfirmed) {
+        event.preventDefault();
+        alert("Form submission cancelled.");
+    }
+    } 
+
+    function confirmReset(event) {
+    const userConfirmed = confirm("Are you sure you want to reset all the information? ");
+    
+    if (!userConfirmed) {
+        event.preventDefault();
+        alert("Form submission cancelled.");
+    }
+    } 
+
+    function missingInformation1() {
+        document.getElementById("studentid").style.background = "red";
+    }
+    </script>
+    </body>
+</html>
