@@ -2,6 +2,31 @@
 <html>
     <head>
         <title>Quiz</title>
+        <style>
+          body{
+              padding: 25px;
+              font-family: arial;
+              width: 80%;
+              margin-left: 10%;
+              }
+      
+              .title {
+                  color: #c45c76;
+              }
+      
+              fieldset:nth-child(2) {
+                   margin-top: 20px;
+              }
+      
+              legend {
+                  background: rgb(163, 42, 68);
+                  color: rgb(255, 185, 208);
+                  padding: 5px;
+              }
+              label {
+                   margin: 5%;
+              }
+          </style>
     </head>
 
     <body>
@@ -12,27 +37,27 @@
         <fieldset>
           <legend>Your Credentials</legend><br/>
           <label> StudentID :
-            <input type="number" name="number" id="number" required onblur = "missingInformation()"/>
+            <input type="number" name="studentid" id="studentid" required onblur = "missingInformation1()"/>
           </label><br/><br/>
 
           <label> Full Name :
-            <input type="text" name="uname" id="uname" required onblur = "missingInformation()" />
+            <input type="text" name="fname" id="fname" required onblur = "missingInformation2()" />
           </label><br/><br/>
 
           <label> Birthday :
-            <input type="date" name="dob" id="dob" required onblur = "missingInformation()" />
+            <input type="date" name="birthday" id="birthday" required onblur = "missingInformation3()" />
           </label><br/><br/>
 
           <label> Email Address :
-            <input type="email" name="email" id="email" required onblur = "missingInformation()" />
+            <input type="email" name="email" id="email" required onblur = "missingInformation4()" />
           </label><br/><br/>
 
           <label> Mobile Phone :
-            <input type="text" name="uname" id="uname" required onblur = "missingInformation()" />
+            <input type="text" name="phone" id="phone" required onblur = "missingInformation5()" />
           </label><br/><br/>
 
           <label> Grade Level :
-            <select name="grader" id="grade" required onblur = "missingInformation()" >
+            <select name="gradelevel" id="gradelevel" required onblur = "missingInformation6()" >
                 <option value="grade7">Grade 7</option>
                 <option value="grade8">Grade 8</option>
                 <option value="grade9">Grade 9</option>
@@ -43,12 +68,12 @@
           </label><br><br>
 
           <label> Intern/Extern :
-            <input type="radio" name="yes" value="intern" /> Intern
-            <input type="radio" name="yes" value="extern" /> Extern
-          </label>
+            <input type="radio" name="i/e" value="intern" /> Intern
+            <input type="radio" name="i/e" value="extern" /> Extern
+          </label><br><br>
 
           <label> Preferred Organization/Club :
-                <select name="pref" id="pref">
+                <select name="club" id="club">
                 <option value="scischo">The Science Scholar</option>
                 <option value="lagablab">Ang Lagablab</option>
                 <option value="bahaghari">Bahaghari</option>
@@ -63,7 +88,7 @@
           </label><br><br>
 
           <label> Why You Want To Join :
-            <textarea name="about" id="about" required onblur = "missingInformation()"></textarea>
+            <textarea name="about" id="about" required onblur = "missingInformation7()"></textarea>
           </label><br><br>
           
         </fieldset>  
@@ -94,9 +119,32 @@
     }
     } 
 
-    function missingInformation1() {
-        document.getElementById("studentid").style.background = "red";
+    function missingInformation() {
+      
     }
+
+    function missingInformation1() {
+        document.getElementById("studentid").style.background = "pink";
+    }
+    function missingInformation2(){
+        document.getElementById("fname").style.background = "pink";
+    }
+    function missingInformation3(){
+        document.getElementById("birthday").style.background = "pink";
+    }
+    function missingInformation4(){
+        document.getElementById("email").style.background = "pink";
+    }
+    function missingInformation5(){
+        document.getElementById("phone").style.background = "pink";
+    }
+    function missingInformation6(){
+        document.getElementById("i/e").style.background = "pink";
+    }
+    function missingInformation7(){
+        document.getElementById("about").style.background = "pink";
+    }
+  
     </script>
     </body>
 </html>
